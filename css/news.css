@@ -1,0 +1,87 @@
+/* *** NEWS PAGE STYLES *** */
+.card {
+    margin-bottom: 2rem;
+    border: 10px solid var(--lightgray);
+    background: rgba(224, 224, 224, 0.8);
+    display: block;
+    padding: 1rem;
+}
+
+.card-body {
+    overflow: auto;
+}
+
+.news-img {
+    margin-right: 1rem;
+    width: 300px;
+    max-width: 100%;
+    float: left;
+}
+
+.card h4 {
+    font-size: 2rem;
+    color: var(--fontcolour);
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card-body a {
+    font-weight: bold;
+    color: var(--fontcolour);
+    transition: .2s ease all;
+}
+
+.card-body a:hover {
+    color: var(--green-hover);
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+
+.author-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--fontcolour);
+}
+
+.author-link:hover {
+    color: var(--green-hover);
+}
+
+.author-link a {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--fontcolour);
+}
+
+.author-link a:hover {
+    color: var(--green-hover);
+}
+
+.float-left {
+    float: left;
+    margin: 0 1rem 1rem 0;
+}
+
+.author-container {
+    display: flex;
+    align-items: center;
+}
+
+.author-container a {
+    margin: 0 .5rem 0 .3rem
+}
+
+.news-navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
+}
+
+/* *** END NEWS PAGE STYLES *** */

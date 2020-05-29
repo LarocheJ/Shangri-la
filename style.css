@@ -1,0 +1,497 @@
+/* 
+Theme Name: Shangri-La
+Author: Jimmy Laroche
+Description: A theme that will make your users fall in love with your resort while keeping it easy to manage.
+Version: 1.0
+*/
+
+/* *** BEGIN GENERAL STYLES *** */
+:root {
+    --bgcolour: #FBFFFB;
+    --white: #fff;
+    --green: #54B84C;
+    --green-hover: #6CCD64;
+    --maingray: #4D4D4D;
+    --lightgray: #9C9C9C;
+    --black: #1A1A1A;
+    --fontcolour: #212121;
+    --mainfont: 'Raleway', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bgcolour);
+    color: var(--fontcolour);
+    font-family: var(--mainfont);
+}
+
+a {
+    transition: .2s ease all;
+}
+
+.wrapper {
+    width: 1100px;
+    max-width: 90%;
+    margin: 0 auto;
+    color: var(--fontcolour);
+    padding: 1rem;
+}
+
+.boxes-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    margin: 2rem 0;
+    border-top: 1px solid var(--lightgray);
+    padding-top: 2rem;
+}
+
+.boxes-container .widget img {
+    width: 100%;
+    height: 100%;
+}
+
+#categories-3,
+#recent-posts-3,
+#archives-2{
+    list-style: none;
+}
+
+iframe,
+img {
+    max-width: 100%;
+}
+
+/* *** BEGIN GENERAL TYPOGRAPHY *** */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: lighter;
+    margin: 0 0 1rem 0;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.page-heading {
+    font-size: 5rem;
+}
+
+/* *** END GENERAL TYPOGRAPHY *** */
+
+/* *** END GENERAL STYLES *** */
+
+/* *** BEGIN HEADER STYLES *** */
+header {
+    width: 100%;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)),
+        url("images/resort.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 2;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#logo {
+    width: 300px;
+}
+
+#logo img {
+    width: 100%;
+}
+
+#menu-main-menu {
+    display: flex;
+}
+
+#main-menu ul {
+    list-style: none;
+}
+
+#main-menu ul li {
+    padding: 1rem;
+    margin-left: 1rem;
+    border-bottom: 3px solid rgba(255, 255, 255, 0);
+}
+
+#main-menu ul li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: .2s ease all;
+    font-size: 1.2rem;
+}
+
+.menu-item-object-custom {
+    display: none;
+}
+
+.menu-item-object-custom {
+    border-bottom: 3px solid rgba(255, 255, 255, 0);
+}
+
+.menu-item-object-custom a {
+    font-size: 2.5rem !important;
+}
+
+#main-menu ul li:hover {
+    border-bottom: 3px solid var(--green);
+}
+
+.menu-item-object-custom:hover {
+    border-bottom: 3px solid rgba(255, 255, 255, 0) !important;
+}
+
+.hero-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    margin-top: 3rem;
+}
+
+.hero-txt h1,
+.hero-txt h2 {
+    font-weight: lighter;
+    margin: 0;
+    text-shadow: 0px 0px 6px #000;
+    transition: .2s ease all;
+}
+
+.main-heading {
+    font-size: 7rem;
+    padding-bottom: 1rem;
+}
+
+.sub-heading {
+    font-size: 4rem;
+}
+
+.bottom-bar {
+    /* weather and search container */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7rem 0;
+}
+
+#s {
+    padding: .8rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    border: none;
+    font-family: var(--mainfont);
+    width: 350px;
+    max-width: 100%;
+    margin-right: 2rem;
+    position: relative;
+}
+
+#searchform {
+    position: relative;
+}
+
+#searchform #search-btn {
+    position: absolute;
+    right: 3rem;
+    top: 0;
+    padding: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.weather-container {
+    margin-left: -2rem;
+    width: 500px;
+    height: 4rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-container p {
+    color: var(--white);
+    margin-left: 1rem;
+}
+
+.weather-container p:first-child {
+    margin-left: 0;
+}
+
+/* *** END HEADER STYLES *** */
+
+/* *** BEGIN FOOTER STLYES *** */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    background: var(--maingray);
+    color: var(--white);
+    padding: 2rem 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--green-hover);
+}
+
+footer h4 {
+    font-size: 2rem;
+}
+
+.social-container h4 {
+    text-align: center;
+}
+
+.social-container div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-container img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    flex: 1;
+    margin: 1rem;
+    transition: .2s ease all;
+}
+
+.social-container img:hover {
+    transform: scale(1.1);
+}
+
+.copyright {
+    background: var(--black);
+    color: var(--white);
+    padding: .3rem 2rem;
+}
+
+.copyright p {
+    font-size: .9rem;
+    text-align: center;
+}
+
+.copyright a {
+	color: var(--green);
+	text-decoration: none;
+}
+
+/* *** END FOOTER STLYES *** */
+
+/* *** BEGIN MEDIA QUERIES *** */
+@media all and (max-width: 1200px) {
+    .menu-item-type-custom {
+        display: block;
+    }
+
+    .menu-item-type-custom a {
+        color: var(--white) !important;
+    }
+
+    .top-nav {
+        padding: .5rem;
+    }
+
+    #menu-main-menu {
+        overflow: hidden;
+        height: 5rem;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem;
+        transition: .3s ease all;
+    }
+
+    #main-menu ul li a {
+        color: var(--fontcolour);
+    }
+
+    #main-menu ul li {
+        margin: 0;
+        padding: .8rem;
+    }
+
+    #main-menu ul li:hover {
+        border-bottom: 3px solid rgba(255, 255, 255, 0);
+    }
+
+    #main-menu ul:hover {
+        height: 22rem;
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    .main-heading {
+        font-size: 6rem;
+    }
+
+    .sub-heading {
+        font-size: 3rem;
+    }
+
+    .weather-container {
+        width: 400px;
+        height: 3rem;
+    }
+
+    .weather-container p {
+        font-size: 1rem;
+    }
+
+    #s {
+        width: 300px;
+        margin-right: 1rem;
+        font-size: 1rem;
+    }
+
+}
+
+@media all and (max-width: 1024px) {
+    .boxes-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .bottom-bar {
+        flex-direction: column;
+        margin: 4rem 0;
+    }
+
+    .weather-container {
+        margin-bottom: 1rem;
+    }
+
+    .hero-txt {
+        margin-top: 2rem;
+    }
+
+    .boxes-container {
+        grid-template-columns: 1fr;
+    }
+
+    .page-heading {
+        font-size: 4rem;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer div {
+        margin: .3rem 0;
+    }
+
+    footer li {
+        margin: .5rem 0;
+    }
+
+    footer a,
+    footer li {
+        font-size: 1.1rem;
+        padding: .5rem;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .main-heading {
+        font-size: 4rem;
+    }
+
+    .sub-heading {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .wrapper {
+        margin-top: 1rem;
+    }
+
+    .page-heading {
+        font-size: 3rem;
+    }
+
+    #logo img {
+        width: 200px;
+    }
+
+    .news-navigation {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .main-heading {
+        font-size: 3rem;
+    }
+
+    .weather-container {
+        width: 120%;
+    }
+
+    .hero-txt {
+        margin-top: 0;
+    }
+
+    .weather-container p:first-child {
+        margin-left: 1.5rem;
+    }
+
+    .page-heading {
+        font-size: 2.5rem;
+    }
+
+    header {
+        overflow-x: hidden;
+    }
+}
+
+/* *** END MEDIA QUERIES *** */
